@@ -1,0 +1,69 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 2px;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  label {
+    display: block;
+    margin-top: 8px;
+  }
+  
+  button {
+    margin-top: 8px;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.navigation button {
+    padding: 10px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.navigation .left-btn {
+    margin-right: auto;
+}
+
+.navigation .right-btn {
+    margin-left: auto;
+}
+body{
+  padding: 2%;
+}
+.text {
+  resize: none; 
+  border: none; 
+  outline: none; 
+  overflow: hidden; 
+  padding: 1px;
+  width: 100%; 
+}
+.text1
+{
+  resize: none; 
+  border: none; 
+  outline: none; 
+  overflow: hidden; 
+  padding: 1px;
+  width: 20%; 
+}
+.book {
+  width:98%;
+  margin: 0 auto;
+  padding: 5px;
+  border: 3px double #000;
+}

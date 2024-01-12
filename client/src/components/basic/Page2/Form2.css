@@ -1,0 +1,96 @@
+.id1 {
+  font-weight: lighter;
+  border: double 6px black;
+  outline: solid 2px black;
+  padding: 10px;
+  margin: 5%;
+}
+
+.p1 {
+  width: 90%;
+  padding: 0%;
+}
+
+textarea {
+  border: none;
+  width: 90%;
+  box-sizing: border-box;
+  margin-inline-start: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.p1 input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.radio-group {
+  display: flex;
+  margin-top: 5px;
+}
+
+.radio-group input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.id1 hr {
+  border: solid 2px black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table input {
+  border: none;
+  width: auto;
+}
+
+tr,
+td {
+  border: 3px solid #000;
+  padding: 5px 10px;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.signature-field {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.signature-upload {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.id1 button {
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #4caf50;
+  margin: 4px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .p1 {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .footer button {
+    margin-right: 0;
+  }
+}

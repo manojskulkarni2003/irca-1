@@ -1,0 +1,53 @@
+#div1
+{
+   float: right;
+}
+#div2
+{
+    display: flex;
+    justify-content: center;
+}
+#f1
+{
+    border: 4px double black;
+    padding: 3%;
+    padding-top: 0px;
+    width: 20cm;
+}
+h1
+{
+    text-align: center;
+}
+table,th,td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: small;
+    height: 60px;
+}
+
+.age
+{
+    width: 30px;
+    margin-right: 100px;
+}
+.bordered-table{
+    height: 150px;
+}
+.bordered-table input[type="text"]
+{
+    border: none;
+    outline: none;
+    width: 35px;
+    height: 50px;
+    padding: 0%;
+}
+.name
+{
+    margin-right: 70px;
+    
+}
+#div7 {
+    display: flex;
+    justify-content: center;
+}

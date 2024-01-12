@@ -1,0 +1,106 @@
+.book {
+    width: 98%;
+    margin: 0 auto;
+    padding: 7px;
+    border: 15px double #000;
+}
+
+.page {
+    border: none;
+}
+input[name="name"],
+input[name="age"],
+input[type="date"] {
+    border: none;
+    padding: 3px;
+    margin-bottom: 10px;
+    size: 80px;
+}
+
+li{
+    font-weight: bold;
+}
+
+.text {
+    resize: none; 
+    border: none !important; 
+    border-bottom: none;
+    outline: none; 
+    overflow: hidden; 
+    padding: 10px;
+    width: 100%;
+    opacity: 0.6; 
+}
+
+.book {
+    width: 98%;
+    margin: 0 auto;
+    padding: 7px;
+    border: 300px double #000;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.no-border {
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.navigation button {
+    padding: 10px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.navigation .left-btn {
+    margin-right: auto;
+}
+
+.navigation .right-btn {
+    margin-left: auto;
+}
+
+body {
+    padding: 10px;
+}
+
+.form {
+    padding: 10px;
+}
+
+input[name="historyOfAlcoholismOrSubstanceAbuse"],
+input[name="physicalComplications"],
+input[name="pastHistory"],
+input[name="withdrawalSymptoms"],
+input[name="psychiatricProblems"],
+input[name="treatment"]{
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; 
+    padding: 5px; 
+    margin-bottom: 15px; 
+    width: 100%; 
+    max-width: 1350px;
+    height:100px;
+    text-align: left; 
+    overflow: hidden; 
+    margin-inline-start:auto;
+}

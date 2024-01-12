@@ -1,0 +1,7 @@
+.sticky-home {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure the background is set to match the surrounding */
+  z-index: 1000; /* Optionally, set a higher z-index if required */
+  /* Add any other styles as needed */
+}

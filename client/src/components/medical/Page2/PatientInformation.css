@@ -1,0 +1,143 @@
+  .page {
+    width: 20cm;
+    min-height: 29.7cm;
+    padding: 3%;
+    margin: auto;
+    padding-top: 1px;
+    border: 4px double black;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+.pad {
+    padding-top: 0px;
+}
+
+a {
+    color: white;
+    background-color: gray;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: darkgray;
+}
+
+h1, h4, h3 {
+    color: #333;
+}
+h1 {
+    text-align: left;
+}
+
+h4 {
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+}
+
+.symptoms-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.symptoms-container div {
+    width: 48%;
+}
+
+#hed {
+    font-size: 15px;
+}
+
+.symptoms-container h2 {
+    border-bottom: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.form-group label {
+    width: 250px;
+    margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.form-group input[type="text"] {
+    width: 500px;
+}
+
+.plus-sign {
+    color: black;
+    cursor: pointer;
+}
+
+.checked .plus-sign::before {
+    content: '\2713';
+    color: black;
+}
+
+@media print {
+    body {
+      background-color: white;
+      font-size: 12pt;
+    }
+  
+    .page {
+      page-break-before: always; /* Add a page break before each .page */
+      margin: 1cm;
+      box-shadow: none;
+      border: 0;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .page {
+        width: 100%;
+        min-width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+}
+
+#div7 {
+    display: flex;
+    justify-content: center;
+}
+
+#p {
+    text-align: center;
+    border: 2px solid black;
+    width: 20px;
+}
+
+.body {
+    position: relative;
+}

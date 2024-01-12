@@ -1,0 +1,119 @@
+
+.l1
+{
+    padding: 1px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+body{
+    padding: 1px;
+}
+#div-body
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px; 
+}
+.div
+{
+    flex: 1;
+    max-width:350px;
+    padding-right: 50px;
+}
+#divOther
+{
+    padding-right: 0px;
+}
+#bold
+{
+    font-weight: 700;
+    padding: 10px;
+}
+.text {
+    resize: none; 
+    border: none; 
+    outline: none; 
+    overflow: hidden; 
+    padding: 10px;
+    width: 70%; 
+  }
+  .text1
+  {
+    resize: none; 
+    border: none; 
+    outline: none; 
+    overflow: hidden; 
+    padding: 10px;
+    width: 10%; 
+  }
+  table {
+    border-collapse: collapse;
+    width: 40%;
+    margin: 10px;
+}
+.priya
+{
+    padding: 0px;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+.navigation .right-btn {
+    margin-left: auto;
+}
+
+.navigation .left-btn {
+    margin-right: auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; 
+}
+
+.navigation button {
+    padding: 10px 10px;
+    font-size: 12px;
+    cursor: pointer;
+} 
+
+.book {
+    width:98%;
+    margin: 0 auto;
+    padding: 7px;
+    border: 3px double #000;
+}
+
+.page {
+    border: 1px double #000;
+}
+
+ul{
+    list-style-type:circle;
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    /* border: solid 1px black; */
+    padding: 5px;
+}
+.book-form {
+    border: 2px double #000;
+    padding: 20px;
+    margin: 20px;
+  }
+
+
+
+  
+  

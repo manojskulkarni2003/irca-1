@@ -1,0 +1,32 @@
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    height: 26.5cm; /* Adjusted for better fit */
+    margin: auto;
+    border: 2px solid black;
+}
+
+th, td {
+    border: 2px solid black;
+    height: 25px; /* Adjusted for better fit */
+    padding: 8px;
+}
+
+form {
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+    padding: 1cm;
+    font-family: Arial, sans-serif;
+    border: 4px double black;
+}
+#div7 {
+    display: flex;
+    justify-content: center;
+}
+textarea{
+    height: 24.5cm;
+}
