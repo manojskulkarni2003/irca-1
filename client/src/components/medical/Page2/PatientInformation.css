@@ -1,4 +1,4 @@
-  .page {
+  /* .page {
     width: 20cm;
     min-height: 29.7cm;
     padding: 3%;
@@ -110,8 +110,8 @@ textarea {
       font-size: 12pt;
     }
   
-    .page {
-      page-break-before: always; /* Add a page break before each .page */
+    .page { */
+      /* page-break-before: always; 
       margin: 1cm;
       box-shadow: none;
       border: 0;
@@ -140,4 +140,4 @@ textarea {
 
 .body {
     position: relative;
-}
+} */

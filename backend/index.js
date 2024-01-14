@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 const conn = (async () => {
     try {
-        const res = await mongoose.connect('mongodb+srv://prajwaa:mutnal@cluster0.cefcnn7.mongodb.net/');
+        const res = await mongoose.connect('mongodb+srv://prateek:Prateek@123@cluster0.jwqoqgr.mongodb.net/');
         if (res) console.log("DB connected");
     }
     catch(err)

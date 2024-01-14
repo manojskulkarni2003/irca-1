@@ -46,7 +46,8 @@ const Page1 = () => {
 
   const [denialStatus, setDenialStatus] = useState('');
   const goToNextPage = async () => {
-    try {
+    // try {
+      // Perform any necessary validation or data processing before navigating
       const dataToSend = {
         familyHistoryRows,
         fatherDeathReason,
@@ -57,70 +58,68 @@ const Page1 = () => {
         languagesKnown,
         denialStatus,
       };
-    
-      console.log('Data to send:', dataToSend);
-    
-      const response = await fetch('http://localhost:4200/family/page1', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToSend),
-      });
-    
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-    
+  
+      // console.log('Data to send:', dataToSend);
+  
+      // const response = await fetch('http://localhost:5000/page1', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(dataToSend),
+      // });
+  
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error! Status: ${response.status}`);
+      // }
+  
       // If needed, handle the response from the server
-    
-    } catch (error) {
-      console.error('Error:', error);
-    } finally {
       // Navigate to the next page
       navigate('/family/page2');
       window.scrollTo({ top: 0, behavior: 'instant' });
-    }
+    // } catch (error) {
+    //   console.error('Error:', error);
+    // }
   };
   
   
   return (
     <div className="page page1 active">
-      <div className="mainhead">
+      <div className="fh_mainhead">
         <h1>Integrated Rehabilitation Centre for Addicts(IRCA) - Family history</h1>
       </div>
-      <div className="family_history">
-        <div className="block-head">
+      <div className="fh_family_history">
+        <div className="fh_block-head">
           <p>I. Family history</p>
         </div>
-        <h2>1. Details regarding parents and siblings (provide relevant information):</h2>
-        <table id="myTable">
+        <h2 className='fh_h2'>1. Details regarding parents and siblings (provide relevant information):</h2>
+        <table id="fh_myTable">
           <thead>
             <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Relation</th>
-              <th>Age</th>
-              <th>Income</th>
-              <th>Education</th>
-              <th>Occupation</th>
-              <th>Use of Intoxicants</th>
+              <th className='fh_th'></th>
+              <th className='fh_th'>Name</th>
+              <th className='fh_th'>Relation</th>
+              <th className='fh_th'>Age</th>
+              <th className='fh_th'>Income</th>
+              <th className='fh_th'>Education</th>
+              <th className='fh_th'>Occupation</th>
+              <th className='fh_th'>Use of Intoxicants</th>
             </tr>
           </thead>
           <tbody>
             {familyHistoryRows.map((row, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td><input type="text" name="name" /></td>
-                <td><input type="text" name="relation" /></td>
-                <td><input type="text" name="age" /></td>
-                <td><input type="text" name="income" /></td>
-                <td><input type="text" name="education" /></td>
-                <td><input type="text" name="occupation" /></td>
-                <td><input type="text" name="intoxicants" /></td>
-                <td>
+                <td className='fh_td'>{index + 1}</td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="name" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="relation" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="age" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="income" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="education" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="occupation" /></td>
+                <td className='fh_td'><input className='fh_input'  type="text" name="intoxicants" /></td>
+                <td className='fh_td'>
                 <button
-                  className="delete-row-btn"
+                  className="fh_delete-row-btn"
                   onClick={() => deleteRow(index)}
                 >
                   Delete
@@ -131,21 +130,22 @@ const Page1 = () => {
           </tbody>
         </table>
 
-        <button className="add-row-btn" onClick={addRow}>Add Row</button>
+        <button className="fh_add-row-btn" onClick={addRow}>Add Row</button>
 
-        <div className="container">
-          <div className="form-container">
-            <table>
+        <div className="fh_container">
+          <div className="fh_form-container">
+            <table className='fh_table'>
               <tr>
-                <th colspan="2">In case of death of parents</th>
+                <th  className='fh_th' colspan="2">In case of death of parents</th>
               </tr>
               <tr>
-                <td>Father:</td>
-                <td>Mother:</td>
+                <td className='fh_td' >Father:</td>
+                <td className='fh_td' >Mother:</td>
               </tr>
               <tr>
-                <td>
+                <td className='fh_td'>
                   <input
+                    className='fh_input'
                     type="text"
                     id="father"
                     placeholder="Reason for father's death"
@@ -153,8 +153,9 @@ const Page1 = () => {
                     onChange={(e) => setFatherDeathReason(e.target.value)}
                   />
                 </td>
-                <td>
+                <td className='fh_td'>
                   <input
+                    className='fh_input'
                     type="text"
                     id="mother"
                     placeholder="Reason for mother's death"
@@ -164,15 +165,16 @@ const Page1 = () => {
                 </td>
               </tr>
               <tr>
-                <th colspan="2">How old were you at that time?</th>
+                <th  className='fh_th'  colspan="2">How old were you at that time?</th>
               </tr>
               <tr>
-                <td>Father's death:</td>
-                <td>Mother's death:</td>
+                <td className='fh_td' >Father's death:</td>
+                <td className='fh_td' >Mother's death:</td>
               </tr>
               <tr>
-                <td>
+                <td className='fh_td'>
                   <input
+                    className='fh_input'
                     type="number"
                     id="f_death"
                     min="1"
@@ -181,8 +183,9 @@ const Page1 = () => {
                     onChange={(e) => setFatherDeathAge(e.target.value)}
                   />
                 </td>
-                <td>
+                <td className='fh_td'>
                   <input
+                    className='fh_input'
                     type="number"
                     id="m_death"
                     min="1"
@@ -196,10 +199,11 @@ const Page1 = () => {
           </div>
         </div>
 
-        <div className="form-container1">
-          <div className="form-section1">
+        <div className="fh_form-container1">
+          <div className="fh_form-section1">
             <label htmlFor="motherTongue" style={{ fontWeight: 'bold' }}>Mother Tongue:</label>
             <input
+              className='fh_input'
               type="text"
               id="motherTongue"
               name="motherTongue"
@@ -209,9 +213,10 @@ const Page1 = () => {
             />
           </div>
 
-          <div className="form-section1">
+          <div className="fh_form-section1">
             <label htmlFor="languagesKnown" style={{ fontWeight: 'bold' }}>Languages Known:</label>
             <input
+              className='fh_input'
               type="text"
               id="languagesKnown"
               name="languagesKnown"
@@ -221,11 +226,12 @@ const Page1 = () => {
             />
           </div>
         </div>
-        <h2>2.Motivation level during admission:</h2>
+        <h2 className='fh_h2'>2.Motivation level during admission:</h2>
 
-        <form>
+        <form className='fh_form'>
           <label style={{ display: 'inline' }}>
             <input
+              className='fh_input'
               type="radio"
               name="denialStatus"
               value="Present"
@@ -237,6 +243,7 @@ const Page1 = () => {
 
           <label style={{ display: 'inline' }}>
             <input
+              className='fh_input'
               type="radio"
               name="denialStatus"
               value="Absent"
@@ -246,16 +253,11 @@ const Page1 = () => {
             Absent
           </label>
         </form>
-        <div className="endbtn">
-        <button className="next-btn" onClick={goToNextPage}>
+        <div className="fh_endbtn">
+        <button className="fh_next-btn" onClick={goToNextPage}>
           Next &raquo;
         </button>
       </div>
-        {/* <!-- Navigation buttons --> */}
-      {/* <div class="endbtn">
-          <button class="next-btn" onclick="navigatePage('page2')">Next &raquo;</button>
-      </div>
-    </div> */}
       </div>
     </div>
   );

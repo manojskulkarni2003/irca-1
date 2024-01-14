@@ -29,7 +29,7 @@ const Page3 = () => {
     income: '',
   });
   const goToNextPage = async () => {
-    try {
+    // try {
       // Create the data object to send to the server
       const dataToSend = {
         childhoodProblems,
@@ -40,205 +40,205 @@ const Page3 = () => {
       };
 
       // Use fetch to send data to the server
-      const response = await fetch('http://localhost:4200/family/page3', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToSend),
-      });
+    //   const response = await fetch('http://localhost:4200/family/page3', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(dataToSend),
+    //   });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+    //   if (!response.ok) {
+    //     throw new Error(`HTTP error! Status: ${response.status}`);
+    //   }
     
-      // If needed, handle the response from the server
+    //   // If needed, handle the response from the server
     
-    } catch (error) {
-      console.error('Error:', error);
-    } finally {
+    // } catch (error) {
+    //   console.error('Error:', error);
+    // } finally {
       // Navigate to the next page
       navigate('/family/page4');
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
-  };
+  // };
   const goToPrevPage = () => {
     // Perform any necessary validation or data processing before navigating
     navigate('/family/page2');
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
   return (
-    <div className="page page3">
-      <h2>8. Childhood/ adolescence (before the age of 15 years)</h2>
-      <table id="myTable">
+    <div className="fh_page fh_page3">
+      <h2 className='fh_h2'>8. Childhood/ adolescence (before the age of 15 years)</h2>
+      <table  className='fh_table'>
         <thead>
           <tr>
-            <th>Problems Identified</th>
-            <th>Present</th>
-            <th>Absent</th>
+            <th className='fh_th'>Problems Identified</th>
+            <th className='fh_th'>Present</th>
+            <th className='fh_th'>Absent</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Running away from home</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance1" />
+            <td className='fh_td'>Running away from home</td>
+            <td  className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance1" />
             </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance1" />
-            </td>
-          </tr>
-          <tr>
-            <td>Frequent physical fights and violence</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance2" />
-            </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance2" />
+            <td className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance1" />
             </td>
           </tr>
           <tr>
-            <td>Destruction of others' property</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance3" />
+            <td className='fh_td'>Frequent physical fights and violence</td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance2" />
             </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance3" />
-            </td>
-          </tr>
-          <tr>
-            <td>Stealing</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance4" />
-            </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance4" />
+            <td className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance2" />
             </td>
           </tr>
           <tr>
-            <td>Scholastic backwardness</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance5" />
+            <td className='fh_td'>Destruction of others' property</td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance3" />
             </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance5" />
-            </td>
-          </tr>
-          <tr>
-            <td>Experimenting with drugs/alcohol</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance6" />
-            </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance6" />
+            <td className="checkbox-container fh_td">
+              <input className='fh_input'  type="radio" name="attendance3" />
             </td>
           </tr>
           <tr>
-            <td>Gambling</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance7" />
+            <td className='fh_td'>Stealing</td>
+            <td className="checkbox-container fh_td">
+              <input  className='fh_input' type="radio" name="attendance4" />
             </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance7" />
+            <td className="checkbox-container fh_td">
+              <input  className='fh_input' type="radio" name="attendance4" />
             </td>
           </tr>
           <tr>
-            <td>Any other</td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance9" />
+            <td className='fh_td'>Scholastic backwardness</td>
+            <td className="checkbox-container fh_td">
+              <input  className='fh_input' type="radio" name="attendance5" />
             </td>
-            <td className="checkbox-container">
-              <input type="radio" name="attendance9" />
+            <td className="checkbox-container fh_td">
+              <input  className='fh_input' type="radio" name="attendance5" />
+            </td>
+          </tr>
+          <tr>
+            <td className='fh_td'>Experimenting with drugs/alcohol</td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input' type="radio" name="attendance6" />
+            </td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input' type="radio" name="attendance6" />
+            </td>
+          </tr>
+          <tr>
+            <td  className='fh_td'>Gambling</td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input' type="radio" name="attendance7" />
+            </td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input' type="radio" name="attendance7" />
+            </td>
+          </tr>
+          <tr>
+            <td className='fh_td'>Any other</td>
+            <td className="checkbox-container fh_td">
+              <input className='fh_input' type="radio" name="attendance9" />
+            </td>
+            <td className="checkbox-container fh_td">
+              <input   className='fh_input' type="radio" name="attendance9" />
             </td>
           </tr>
         </tbody>
       </table>
 
       <div>
-        <div className="block-head">
+        <div className="fh_block-head">
           <p>III. Educational history</p>
         </div>
         <label style={{ fontWeight: 'bold' }} htmlFor="yoe">
-          9. Years of education
+          <h2 className='fh_h2'>9. Years of education</h2>
         </label>
-        <input type="number" id="yoe" placeholder="Enter here:" />
+        <input   className='fh_input' type="number" id="yoe" placeholder="Enter here:" />
         <br />
         <label style={{ fontWeight: 'bold' }} htmlFor="Acinpast">
-          10. Achievements in the past
+        <h2 className='fh_h2'>10. Achievements in the past</h2>
         </label>
         <br />
-        <textarea placeholder="Write here"></textarea>
+        <textarea  className='fh_textarea' placeholder="Write here"></textarea>
         <br />
-
-        <table id="myTable2">
+        <br/>
+        <table className="fh_table">
           <thead>
             <tr>
-              <th>Activities</th>
-              <th>Present</th>
-              <th>Absent</th>
+              <th className='fh_th'>Activities</th>
+              <th className='fh_th'>Present</th>
+              <th className='fh_th'>Absent</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Good Academic Records</td>
-              <td className="checkbox-container">
-                <input type="radio" name="attendance11" />
+              <td className='fh_td' >Good Academic Records</td>
+              <td className="checkbox-container fh_td">
+                <input  className='fh_input' type="radio" name="attendance11" />
               </td>
-              <td className="checkbox-container">
-                <input type="radio" name="attendance11" />
+              <td className="checkbox-container fh_td">
+                <input  className='fh_input' type="radio" name="attendance11" />
               </td>
             </tr>
             <tr>
-              <td>High Achiever in Extracurricular Activities</td>
-              <td className="checkbox-container">
-                <input type="radio" name="attendance12" />
+              <td className='fh_td'>High Achiever in Extracurricular Activities</td>
+              <td className="checkbox-container fh_td">
+                <input  className='fh_input' type="radio" name="attendance12" />
               </td>
-              <td className="checkbox-container">
-                <input type="radio" name="attendance12" />
+              <td className="checkbox-container fh_td">
+                <input  className='fh_input' type="radio" name="attendance12" />
               </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div className="block-head">
+      <div className="fh_block-head">
         <p>IV. Marital history</p>
       </div>
       <span>
         <p style={{ fontWeight: 'bold', color: 'black' }}>
-          11. Details regarding spouse:
+          <h2 className='fh_h2'>11. Details regarding spouse:</h2>
         </p>
       </span>
-      <table>
+      <table className='fh_table'>
         <tbody>
           <tr>
-            <td className="label">Name:</td>
-            <td className="input">
-              <input type="text" id="spouseName" name="spouseName" />
+            <td className=" fh_td  fh_label">Name:</td>
+            <td className=" fh_td  fh_input">
+              <input  className='fh_input' type="text" id="spouseName" name="spouseName" />
             </td>
           </tr>
           <tr>
-            <td className="label">Age:</td>
-            <td className="input">
-              <input type="text" id="spouseAge" name="spouseAge" />
+            <td className=" fh_td  fh_label">Age:</td>
+            <td className=" fh_td  fh_input">
+              <input  className='fh_input' type="text" id="spouseAge" name="spouseAge" />
             </td>
           </tr>
           <tr>
-            <td className="label">Religion/Community:</td>
-            <td className="input">
-              <input type="text" id="spouseReligion" name="spouseReligion" />
+            <td className=" fh_td  fh_label">Religion/Community:</td>
+            <td className=" fh_td  fh_input">
+              <input  className='fh_input' type="text" id="spouseReligion" name="spouseReligion" />
             </td>
           </tr>
           <tr>
-            <td className="label">Education:</td>
-            <td className="input">
-              <input type="text" id="spouseEducation" name="spouseEducation" />
+            <td className="fh_label fh_td">Education:</td>
+            <td className="fh_input fh_td" >
+              <input  className='fh_input'  type="text" id="spouseEducation" name="spouseEducation" />
             </td>
           </tr>
           <tr>
-            <td className="label">Occupation:</td>
-            <td className="input">
-              <input
+            <td className="fh_label fh_td">Occupation:</td>
+            <td className="fh_input fh_td">
+              <input className='fh_input'  
                 type="text"
                 id="spouseOccupation"
                 name="spouseOccupation"
@@ -246,18 +246,18 @@ const Page3 = () => {
             </td>
           </tr>
           <tr>
-            <td className="label">Income per Month:</td>
-            <td className="input">
-              <input type="text" id="spouseIncome" name="spouseIncome" />
+            <td className="fh_label fh_td">Income per Month:</td>
+            <td className="fh_input fh_td">
+              <input  className='fh_input'   type="text" id="spouseIncome" name="spouseIncome" />
             </td>
           </tr>
         </tbody>
       </table>
-      <div className="endbtn">
-        <button className="prev-btn" onClick={goToPrevPage}>
+      <div className="fh_endbtn">
+        <button className="fh_prev-btn" onClick={goToPrevPage}>
           &laquo;  Prev
         </button>
-        <button className="next-btn" onClick={goToNextPage}>
+        <button className="fh_next-btn" onClick={goToNextPage}>
           Next &raquo;
         </button>
       </div>

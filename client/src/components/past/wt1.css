@@ -1,4 +1,4 @@
-
+/* 
 .l1
 {
     padding: 1px;
@@ -103,17 +103,13 @@ ul{
 }
 li {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
     /* border: solid 1px black; */
-    padding: 5px;
+    /* padding: 5px;
 }
 .book-form {
     border: 2px double #000;
     padding: 20px;
     margin: 20px;
   }
-
-
-
-  
-  
+   */

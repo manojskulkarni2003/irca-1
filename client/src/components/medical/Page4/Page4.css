@@ -1,18 +1,18 @@
-h2 {
+/* h2 {
     text-align: center;
 }
 
 table {
     width: 100%;
-    height: 26.5cm; /* Adjusted for better fit */
-    margin: auto;
+    height: 26.5cm;  */
+    /* margin: auto;
     border: 2px solid black;
 }
 
 th, td {
     border: 2px solid black;
-    height: 25px; /* Adjusted for better fit */
-    padding: 8px;
+    height: 25px;  */
+    /* padding: 8px;
 }
 
 form {
@@ -29,4 +29,4 @@ form {
 }
 textarea{
     height: 24.5cm;
-}
+} */

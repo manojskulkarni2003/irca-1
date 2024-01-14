@@ -1,410 +1,395 @@
 body {
-    /* font-family: "Arial", sans-serif; */
-    font-family: 'Times New Roman', Times, serif;
-    /* background-color: #f8f8f8; */
-    font-weight: bold;
-    /* color: #333; */
-  }
-  
-  h2 {
-    margin-top: 20px;
-    /* color: #555; */
-    color: #000000;
-  }
-  .flex {
+  font-family: "Arial", sans-serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  /* background-color: #f8f8f8; */
+  font-weight: bold;
+  /* color: #333; */
+  padding-bottom: 10px;
+}
+
+.fh_h2 {
+  margin-top: 20px;
+  /* color: #555; */
+  color: #000000;
+}
+.fh_flex {
+  display: flex;
+}
+.fh_flex > label {
+  margin-right: 20px;
+}
+
+.fh_lessWidth {
+  width: 41.5%;
+}
+
+.fh_textarea
+{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* border: 1px solid white; */
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.fh_input[type="text"],
+.fh_input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* border: 1px solid white; */
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.fh_checkbox-group label {
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.fh_table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.fh_th,
+.fh_td {
+  /* border: 1px solid #ddd; */
+  border: 1px solid white;
+  padding: 1px 12px 12px 12px;
+  text-align: left;
+}
+
+.fh_th {
+  background-color: #f5f5f5;
+}
+
+.fh_input[type="radio"] {
+  margin-right: 5px;
+}
+
+.fh_add-row-btn {
+  padding: 12px;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 40px;
+}
+.fh_add-row-btn:hover {
+  transform: scale(1.03);
+  padding: 12px;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 40px;
+}
+
+.fh_container {
+  margin-top: 20px;
+}
+
+.fh_form-container,
+.fh_form-container1 {
+  margin-bottom: 20px;
+}
+
+.fh_form-container table,
+.fh_form-container1 label {
+  font-size: 16px;
+}
+
+.fh_form-container1 input {
+  font-size: 16px;
+}
+.fh_form-container1 {
+  display: flex;
+}
+
+.fh_form-container1 > .fh_form-section1 {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.fh_p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 20px;
+}
+
+.fh_form label {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.fh_container {
+  margin-top: 20px;
+}
+
+.fh_change {
+  display: inline;
+}
+
+.fh_p:last-child {
+  margin-bottom: 20px;
+}
+
+.fh_table:last-child input[type="radio"] {
+  margin-right: 10px;
+}
+
+#fh_myTable tbody tr:last-child {
+  background-color: #f0f0f0;
+}
+/* Additional CSS for specific sections */
+
+/* Styling for section 2: Motivation level during admission */
+.fh_form {
+  margin-top: 20px;
+}
+
+.fh_form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styling for section 3: Causative factors */
+.fh_textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+/* Styling for section 4: Experience of Blackout */
+.fh_label {
+  display: block;
+  margin-top: 20px;
+}
+
+/* Styling for section 5: Behavioral changes after consuming Alcohol/Drugs */
+.fh_checkbox-group {
+  margin-top: 10px;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.fh_h2 {
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.fh_checkbox-group label {
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Styling for section 6: Childhood and Adolescence History */
+.fh_textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+}
+
+/* Styling for section 7: Did you experience the following before the age of 15 years? */
+.fh_table {
+  margin-top: 20px;
+}
+
+.fh_th,
+.fh_td {
+  text-align: center;
+}
+.fh_input::placeholder,
+.fh_textarea::placeholder {
+  font-family: "Arial", sans-serif;
+}
+.fh_delete-row-btn {
+  padding: 12px;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 40px;
+}
+.fh_delete-row-btn:hover {
+  padding: 12px;
+  background-color: rgb(68, 66, 66);
+  transform: scale(1.03);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 40px;
+}
+/* Add more styles as needed for other sections */
+/* Additional CSS for square-shaped radio buttons */
+.fh_input[type="radio"] {
+  margin-right: 5px;
+  margin-left: 20px;
+  -webkit-appearance: none; /* Remove default styles on Safari/Chrome */
+  -moz-appearance: none; /* Remove default styles on Firefox */
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #555;
+  border-radius: 4px; /* Adjust border-radius as needed */
+  outline: none;
+  cursor: pointer;
+}
+
+.fh_input[type="radio"]:checked {
+  background-color: rgb(168, 167, 167);
+  border: 2px solid black;
+  border-radius: 4px; /* Adjust border-radius as needed */
+}
+
+.fh_newc {
+  font-size: medium;
+}
+
+/* Styles for "Experience of Tolerance" section */
+.fh_label[for="experienceOfTolerance"] {
+  font-weight: bold;
+  /* color: #007bff; Blue color, adjust as needed */
+}
+
+.fh_textarea#experienceOfTolerance {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Styles for "How would you describe your childhood/teenage years?" section */
+.fh_label[for="childhoodDescription"] {
+  font-weight: bold;
+  /* color: #ff6600; Orange color, adjust as needed */
+}
+
+.fh_textarea#childhoodDescription {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Add your global styles here if needed */
+
+/* Style for the submit button */
+.fh_submit-btn {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Add some padding to the button */
+  font-size: 16px; /* Set the font size */
+  border: none; /* Remove the default border */
+  border-radius: 4px; /* Add a slight border-radius */
+  margin-left: 49%;
+  cursor: pointer; /* Add a pointer cursor on hover */
+  margin-top: 20px; /* Add margin at the top to create space between form elements */
+}
+
+/* Add hover effect */
+.fh_submit-btn:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+.fh_mainhead {
+  background-color: #000000;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 60px;
+}
+
+.fh_mainhead {
+  background-color: rgb(68, 66, 66);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+.fh_endbtn
+{
     display: flex;
-  }
-  .flex > label {
-    margin-right: 20px;
-  }
-  
-  .lessWidth {
-    width: 41.5%;
-  }
-  
-  textarea,
-  input[type="text"],
-  input[type="number"] {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-    /* border: 1px solid white; */
-    border-radius: 4px;
-    margin-top: 4px;
-    margin-bottom: 8px;
-    font-size: 16px;
-  }
-  
-  ::placeholder {
-    font-size: 16px;
-  }
-  
-  .checkbox-group label {
-    margin-right: 20px;
-    display: inline-flex;
-    align-items: center;
-    font-size: 16px;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  
-  th,
-  td {
-    /* border: 1px solid #ddd; */
-    border: 1px solid white;
-    padding: 1px 12px 12px 12px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f5f5f5;
-  }
-  
-  input[type="radio"] {
-    margin-right: 5px;
-  }
-  
-  .add-row-btn {
-    padding: 12px;
+    justify-content: center;
+}
+.fh_endbtn button
+{
+    font-size: 15px;
+    padding: 12px 12px;
+    border-radius: 10px;
+    margin: 10px 4px;
+}
+.fh_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
     background-color: rgb(68, 66, 66);
     color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 16px;
-    height: 40px;
-  }
-  .add-row-btn:hover {
-    transform: scale(1.03);
-    padding: 12px;
-    background-color: rgb(68, 66, 66);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 16px;
-    height: 40px;
-  }
-  
-  .container {
-    margin-top: 20px;
-  }
-  
-  .form-container,
-  .form-container1 {
-    margin-bottom: 20px;
-  }
-  
-  .form-container table,
-  .form-container1 label {
-    font-size: 16px;
-  }
-  
-  .form-container1 input {
-    font-size: 16px;
-  }
-  .form-container1 {
-    display: flex;
-  }
-  
-  .form-container1 > .form-section1 {
-    width: 50%;
-    margin-right: 5px;
-  }
-  
-  p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
-    margin-top: 20px;
-  }
-  
-  form label {
-    font-size: 16px;
-    margin-right: 20px;
-  }
-  
-  .container {
-    margin-top: 20px;
-  }
-  
-  .change {
-    display: inline;
-  }
-  
-  p:last-child {
-    margin-bottom: 20px;
-  }
-  
-  table:last-child input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  #myTable tbody tr:last-child {
-    background-color: #f0f0f0;
-  }
-  /* Additional CSS for specific sections */
-  
-  /* Styling for section 2: Motivation level during admission */
-  form {
-    margin-top: 20px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  /* Styling for section 3: Causative factors */
-  textarea {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-  }
-  
-  /* Styling for section 4: Experience of Blackout */
-  label {
-    display: block;
-    margin-top: 20px;
-  }
-  
-  /* Styling for section 5: Behavioral changes after consuming Alcohol/Drugs */
-  .checkbox-group {
-    margin-top: 10px;
-    margin-bottom: 10px; /* Adjust the margin as needed */
-  }
-  
-  h2 {
-    margin-bottom: 10px; /* Adjust the margin as needed */
-  }
-  
-  .checkbox-group label {
-    margin-right: 20px;
-    display: inline-flex;
-    align-items: center;
-    font-size: 16px;
-  }
-  
-  /* Styling for section 6: Childhood and Adolescence History */
-  textarea {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-  }
-  
-  /* Styling for section 7: Did you experience the following before the age of 15 years? */
-  table {
-    margin-top: 20px;
-  }
-  
-  th,
-  td {
-    text-align: center;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    font-family: "Arial", sans-serif;
-  }
-  .delete-row-btn {
-    padding: 12px;
-    background-color: rgb(68, 66, 66);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 16px;
-    height: 40px;
-  }
-  .delete-row-btn:hover {
-    padding: 12px;
-    background-color: rgb(68, 66, 66);
-    transform: scale(1.03);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 16px;
-    height: 40px;
-  }
-  /* Add more styles as needed for other sections */
-  /* Additional CSS for square-shaped radio buttons */
-  input[type="radio"] {
-    margin-right: 5px;
-    -webkit-appearance: none; /* Remove default styles on Safari/Chrome */
-    -moz-appearance: none; /* Remove default styles on Firefox */
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #555;
-    border-radius: 4px; /* Adjust border-radius as needed */
-    outline: none;
-    cursor: pointer;
-  }
-  
-  input[type="radio"]:checked {
-    background-color: rgb(168, 167, 167);
-    border: 2px solid black;
-    border-radius: 4px; /* Adjust border-radius as needed */
-  }
-  
-  .newc {
-    font-size: medium;
-  }
-  
-  /* Styles for "Experience of Tolerance" section */
-  label[for="experienceOfTolerance"] {
-    font-weight: bold;
-    /* color: #007bff; Blue color, adjust as needed */
-  }
-  
-  textarea#experienceOfTolerance {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  /* Styles for "How would you describe your childhood/teenage years?" section */
-  label[for="childhoodDescription"] {
-    font-weight: bold;
-    /* color: #ff6600; Orange color, adjust as needed */
-  }
-  
-  textarea#childhoodDescription {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  /* Add your global styles here if needed */
-  
-  /* Style for the submit button */
-  .submit-btn {
-    background-color: #4caf50; /* Green background color */
-    color: white; /* White text color */
-    padding: 10px 15px; /* Add some padding to the button */
-    font-size: 16px; /* Set the font size */
-    border: none; /* Remove the default border */
-    border-radius: 4px; /* Add a slight border-radius */
-    margin-left: 49%;
-    cursor: pointer; /* Add a pointer cursor on hover */
-    margin-top: 20px; /* Add margin at the top to create space between form elements */
-  }
-  
-  /* Add hover effect */
-  .submit-btn:hover {
-    background-color: #45a049; /* Darker green color on hover */
-  }
-  .mainhead {
-    background-color: #000000;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 60px;
-  }
-  body{
+    font-weight: 300;
+}
+.fh_block-head p
+{
+    color: black;
+    font-size: 35px;
     margin-bottom: 50px;
-  }
+    list-style: upper-roman;
+}
+.fh_hidden
+{
+    display: none;
+}
+.fh_view
+{
+    display: block;
+}
+.fh_family_history , .fh_page2 , .fh_page3,.fh_page4,.fh_page5{
+  padding-left: 2px;
+  padding-bottom: 2px;
+  margin: 0px 90px;
+  padding: 20px; 
+  /* border-color: black;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 25px; */
 
-  .mainhead {
-    background-color: rgb(68, 66, 66);
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 70px;
-  }
-  .endbtn
-  {
-      display: flex;
-      justify-content: center;
-  }
-  .endbtn button
-  {
-      font-size: 15px;
-      padding: 12px 12px;
-      border-radius: 10px;
-      margin: 10px 4px;
-  }
-  .endbtn button:hover
-  {
-      font-size: 15px;
-      border-radius: 10px;
-      background-color: rgb(68, 66, 66);
-      color: white;
-      font-weight: 300;
-  }
-  .block-head p
-  {
-      color: black;
-      font-size: 35px;
-      margin-bottom: 50px;
-      list-style: upper-roman;
-  }
-  .hidden
-  {
-      display: none;
-  }
-  .view
-  {
-      display: block;
-  }
-  /* #detailBlock
-  {
-      display: none;
-  }
-  #detailBlock2
-  {
-      display: none;
-  }
-  #detailBlock3
-  {
-      display: none;
-  }
-  #detailBlock4
-  {
-      display: none;
-  } */
-  
-  
-  /* family history */
-  
-  
-  body{
-    /* height: 100vh; */
-    padding-bottom: 10px;
-  }
-  .family_history , .page2 , .page3,.page4,.page5{
-    padding-left: 2px;
-    padding-bottom: 2px;
-    margin: 0px 90px;
-    padding: 20px; 
-    /* border-color: black;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 25px; */
+  border: double 6px black;
+  outline: solid 2px black;
 
-    border: double 6px black;
-    outline: solid 2px black;
+}
+.fh_page2,.fh_page3,.fh_page4,.fh_page5
+{
+  margin-top: 50px;
+}
 
-  }
-  .page2,.page3,.page4,.page5
-  {
-    margin-top: 50px;
-  }
-  
-  

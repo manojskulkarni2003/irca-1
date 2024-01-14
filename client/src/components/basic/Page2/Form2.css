@@ -1,4 +1,4 @@
-.id1 {
+/* .id1 {
   font-weight: lighter;
   border: double 6px black;
   outline: solid 2px black;
@@ -80,7 +80,6 @@ td {
   cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .p1 {
     width: 100%;
@@ -93,4 +92,4 @@ td {
   .footer button {
     margin-right: 0;
   }
-}
+} */

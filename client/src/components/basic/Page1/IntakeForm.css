@@ -1,4 +1,4 @@
-.intake-form {
+/* .intake-form {
   width: auto;
   margin: 0 auto;
   padding: 5%;
@@ -116,7 +116,7 @@ textarea{
 }
 
 .mid1 textarea {
-  width: calc(100% - 20px); /* Adjust the padding as needed */
+  width: calc(100% - 20px); 
   padding: 8px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -133,4 +133,4 @@ textarea{
   margin-right: 5%;
   cursor: pointer;
 }
-
+ */
