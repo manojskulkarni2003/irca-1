@@ -1,13 +1,13 @@
-/* .book {
-    width: 98%;
+.past3book {
     margin: 0 auto;
     padding: 7px;
     border: 15px double #000;
 }
 
-.page {
+.past3page {
     border: none;
 }
+
 input[name="name"],
 input[name="age"],
 input[type="date"] {
@@ -17,11 +17,11 @@ input[type="date"] {
     size: 80px;
 }
 
-li{
+.past3-li{
     font-weight: bold;
 }
 
-.text {
+/* .text {
     resize: none; 
     border: none !important; 
     border-bottom: none;
@@ -30,32 +30,23 @@ li{
     padding: 10px;
     width: 100%;
     opacity: 0.6; 
-}
+} */
 
-.book {
+.past3book {
     width: 98%;
     margin: 0 auto;
     padding: 7px;
     border: 300px double #000;
 }
 
-h1 {
-    text-align: center;
+
+.past3form {
     margin-bottom: 20px;
+    padding: 10px;
 }
 
-form {
-    margin-bottom: 20px;
-}
 
-.no-border {
-    border: none;
-    resize: none;
-    outline: none;
-    padding: 5px;
-}
-
-.navigation {
+/* .past3navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,23 +57,23 @@ form {
     padding: 10px 10px;
     font-size: 12px;
     cursor: pointer;
-}
+} */
 
-.navigation .left-btn {
+/* .navigation .left-btn {
     margin-right: auto;
 }
 
 .navigation .right-btn {
     margin-left: auto;
-}
+} */
 
-body {
+/* body {
     padding: 10px;
-}
+} */
 
-.form {
-    padding: 10px;
-}
+.past3button {
+    margin-top: 8px;
+  }
 
 input[name="historyOfAlcoholismOrSubstanceAbuse"],
 input[name="physicalComplications"],
@@ -103,4 +94,24 @@ input[name="treatment"]{
     text-align: left; 
     overflow: hidden; 
     margin-inline-start:auto;
-} */
+}
+
+.ph_endbtn button
+{
+    font-size: 15px;
+    padding: 12px 12px;
+    border-radius: 10px;
+    margin: 10px 4px;
+}
+.ph_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    font-weight: 300;
+}
+.ph_display{
+    display: flex;
+    justify-content: center;
+}

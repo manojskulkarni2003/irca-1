@@ -1,88 +1,94 @@
-/* .form {
-    border: double 6px black;
-    outline: solid 2px black;
-    padding-left: 10px;
-    margin: 5%;
+.bi_form {
+  border: double 6px black;
+  outline: solid 2px black;
+  padding-left: 10px;
+  margin: 5%;
 }
 
-#heading {
-    border: 2px solid black;
-    display: inline-block; 
-    padding: 7px;
-    border-radius: 6px;
-    margin-left: 40%;
+#bi_heading {
+  border: 2px solid black;
+  display: inline-block; 
+  padding: 7px;
+  border-radius: 6px;
+  margin-left: 40%;
 }
 
 
 
-#signtxt{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-left: 75%;
+#bi_signtxt{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 75%;
 }
-#signtxt1 {
-    display: flex;
-    flex-direction: row;
-    float: inline-end;
-  }
-  
-  #name1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        margin-right: 15%;
-  }
-
-
-  #sign1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-  }
-
-
-  #signtxt2 {
-    display: flex;
-    flex-direction: row;
-    float: inline-end;
-  }
-  
-  #name2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        margin-right: 15%;
-  }
-
-
-  #sign2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-  }
-
-#mobileNo {
-    margin-left: 35%;
+#bi_signtxt1 {
+  display: flex;
+  flex-direction: row;
+  float: inline-end;
 }
 
-.form input[type="text"] {
-    width: 15ch;
-    border: none;
-    border-bottom: 3px dotted #000;
-    text-decoration: none;
+#bi_name1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+      margin-right: 15%;
 }
 
-.form button {
+
+#bi_sign1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+#bi_signtxt2 {
+  display: flex;
+  flex-direction: row;
+  float: inline-end;
+}
+
+#bi_name2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+      margin-right: 15%;
+}
+
+
+#bi_sign2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+#bi_mobileNo {
+  margin-left: 30%;
+}
+
+.bi_form input[type="text"] {
+  width: 15ch;
+  border: none;
+  border-bottom: 3px dotted #000;
   text-decoration: none;
-  transition: background-color 0.3s;
-  border: 1px solid #4caf50;
-  margin: 4px;
-  margin-right: 5%;
-  cursor: pointer;
 }
 
+/* .bi_form button {
+text-decoration: none;
+transition: background-color 0.3s;
+border: 1px solid #4caf50;
+margin: 4px;
+margin-right: 5%;
+cursor: pointer;
+} */
 
- */
+.bi_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    font-weight: 300;
+}

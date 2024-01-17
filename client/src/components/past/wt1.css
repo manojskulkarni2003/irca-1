@@ -1,36 +1,34 @@
-/* 
-.l1
-{
+.past1l1{
     padding: 1px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
-body{
+/* body{
     padding: 1px;
-}
-#div-body
+} */
+#past1-div-body
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px; 
+    padding: 10px; 
 }
-.div
+.past1div
 {
     flex: 1;
-    max-width:350px;
-    padding-right: 50px;
+    max-width:450px;
+    padding-right: 100px;
 }
-#divOther
+#past1divOther
 {
     padding-right: 0px;
 }
-#bold
+#past1bold
 {
     font-weight: 700;
     padding: 10px;
 }
-.text {
+.past1text {
     resize: none; 
     border: none; 
     outline: none; 
@@ -38,7 +36,7 @@ body{
     padding: 10px;
     width: 70%; 
   }
-  .text1
+  .past1text1
   {
     resize: none; 
     border: none; 
@@ -47,69 +45,88 @@ body{
     padding: 10px;
     width: 10%; 
   }
-  table {
+  .past1table {
     border-collapse: collapse;
     width: 40%;
     margin: 10px;
 }
-.priya
-{
-    padding: 0px;
-    text-align: left;
-}
 
-th, td {
+.past1-th, .past1-td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
-.navigation .right-btn {
+
+/* .navigation .right-btn {
     margin-left: auto;
 }
 
 .navigation .left-btn {
     margin-right: auto;
-}
+} */
 
-.navigation {
+/* .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px; 
-}
+} */
 
-.navigation button {
+/* .navigation button {
     padding: 10px 10px;
     font-size: 12px;
     cursor: pointer;
-} 
+}  */
 
-.book {
+/* .book {
     width:98%;
     margin: 0 auto;
     padding: 7px;
     border: 3px double #000;
-}
+} */
 
-.page {
+/* .page {
     border: 1px double #000;
-}
+} */
 
-ul{
-    list-style-type:circle;
+.past1-ul {
+    list-style-type: circle;
     list-style: disc;
     display: flex;
     flex-direction: column;
 }
-li {
+
+.past1-li{
     display: flex;
-    justify-content: space-between; */
+    justify-content: space-between;
     /* border: solid 1px black; */
-    /* padding: 5px;
+    padding: 5px;
 }
-.book-form {
+/* .book-form {
     border: 2px double #000;
     padding: 20px;
     margin: 20px;
-  }
-   */
+} */
+.ph_endbtn button
+{
+    font-size: 15px;
+    padding: 12px 12px;
+    border-radius: 10px;
+    margin: 10px 4px;
+}
+.ph_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    font-weight: 300;
+}
+.ph_display{
+    display: flex;
+    justify-content: center;
+}
+
+
+  
+  

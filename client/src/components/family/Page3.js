@@ -29,7 +29,7 @@ const Page3 = () => {
     income: '',
   });
   const goToNextPage = async () => {
-    // try {
+    try {
       // Create the data object to send to the server
       const dataToSend = {
         childhoodProblems,
@@ -40,28 +40,28 @@ const Page3 = () => {
       };
 
       // Use fetch to send data to the server
-    //   const response = await fetch('http://localhost:4200/family/page3', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(dataToSend),
-    //   });
+      const response = await fetch('http://localhost:5000/family/page3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
 
-    //   if (!response.ok) {
-    //     throw new Error(`HTTP error! Status: ${response.status}`);
-    //   }
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
     
     //   // If needed, handle the response from the server
     
-    // } catch (error) {
-    //   console.error('Error:', error);
-    // } finally {
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
       // Navigate to the next page
       navigate('/family/page4');
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
-  // };
+  };
   const goToPrevPage = () => {
     // Perform any necessary validation or data processing before navigating
     navigate('/family/page2');

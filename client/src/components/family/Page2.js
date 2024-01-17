@@ -30,7 +30,7 @@ const Page2 = () => {
     const navigate = useNavigate();
 
     const goToNextPage = async () => {
-      // try {
+      try {
         // Create the data object to send to the server
         const dataToSend = {
           causativeFactors,
@@ -41,27 +41,27 @@ const Page2 = () => {
         };
   
         // Use fetch to send data to the server
-      //   const response = await fetch('http://localhost:4200/family/page2', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //     },
-      //     body: JSON.stringify(dataToSend),
-      //   });
-      //   if (!response.ok) {
-      //     throw new Error(`HTTP error! Status: ${response.status}`);
-      //   }
+        const response = await fetch('http://localhost:5000/family/page2', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dataToSend),
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
       
       //   // If needed, handle the response from the server
       
-      // } catch (error) {
-      //   console.error('Error:', error);
-      // } finally {
+      } catch (error) {
+        console.error('Error:', error);
+      } finally {
         // Navigate to the next page
         navigate('/family/page3');
         window.scrollTo({ top: 0, behavior: 'instant' });
       }
-    // };
+    };
 
       const goToPrevPage = () => {
         // Perform any necessary validation or data processing before navigating

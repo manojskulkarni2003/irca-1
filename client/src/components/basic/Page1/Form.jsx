@@ -1,10 +1,8 @@
-import React, { useState,  useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./IntakeForm.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
-
 
 const IntakeForm = () => {
   const [formData, setFormData] = useState({
@@ -52,21 +50,16 @@ const IntakeForm = () => {
     );
   };
 
-
-
   const navigate = useNavigate();
 
-  
-
-
   const handleNext = () => {
-    localStorage.setItem('formData', JSON.stringify(formData));
-    navigate('/basic/form2');
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    localStorage.setItem("formData", JSON.stringify(formData));
+    navigate("/basic/form2");
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const loadSavedData = () => {
-    const savedData = localStorage.getItem('formData');
+    const savedData = localStorage.getItem("formData");
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
@@ -76,30 +69,29 @@ const IntakeForm = () => {
     loadSavedData();
   }, []);
 
- 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-
-const handleInputChange = (e) => {
-  const { name, value } = e.target;
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
-
-
-// /Submit the data Successfully
+  // /Submit the data Successfully
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4200/basic/api/submitFormData", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:4200/basic/api/submitFormData",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       // Handle response if needed
       console.log("Form data submitted:", response);
@@ -133,34 +125,34 @@ const handleInputChange = (e) => {
     }
   };
 
-
   const [fetchedData, setFetchedData] = useState(null);
-
 
   //data fetch
   // Function to handle fetching incomplete data
   const fetchIncompleteData = async () => {
     try {
-      const response = await fetch(`http://localhost:4200/basic/api/getIncompleteData?name=${formData.name}`);
+      const response = await fetch(
+        `http://localhost:5000/basic/api/getIncompleteData?name=${formData.name}`
+      );
       if (!response.ok) {
-        throw new Error('Failed to fetch data');
+        throw new Error("Failed to fetch data");
       }
-  
+
       const incompleteData = await response.json();
-      console.log('Incomplete Data:', incompleteData);
+      console.log("Incomplete Data:", incompleteData);
       setFetchedData(incompleteData); // Set fetched data to state
     } catch (error) {
-      console.error('Error fetching incomplete data:', error);
+      console.error("Error fetching incomplete data:", error);
       // Handle error state or feedback to the user
     }
   };
-  
-   // Populate form fields with fetched data
-   const populateFormFields = () => {
+
+  // Populate form fields with fetched data
+  const populateFormFields = () => {
     if (!fetchedData) {
       return null;
     }
-  
+
     const updatedFormData = { ...formData };
     for (const key in fetchedData) {
       if (Object.prototype.hasOwnProperty.call(fetchedData, key)) {
@@ -169,33 +161,30 @@ const handleInputChange = (e) => {
     }
     setFormData({
       ...formData,
-      name: fetchedData.name || '',
-      maritalStatus: fetchedData.maritalStatus || '',
-      occupation: fetchedData.occupation || '',
+      name: fetchedData.name || "",
+      maritalStatus: fetchedData.maritalStatus || "",
+      occupation: fetchedData.occupation || "",
       // Add other fields similarly
     });
   };
-  
 
   return (
     <form onSubmit={handleSubmit}>
-
-      <div className="intake-form">
-
-        <div className="form-page ">
-
-          <div className="top">
-            <h2>INTAKE FORM</h2>
-            <label htmlFor="photo">Select Photo:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" />
+      <div className="bi_intake-form">
+        <div className="bi_form-page ">
+          <div className="bi_top">
+            <h2 id="bi_leftshift">2.Basic Information</h2>
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
+          <label htmlFor="photo">Select Photo:</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+          <br />
 
-          <br/>
-
-          <div className="fix">
-
-            <div className="left-section">
-
+          <div className="bi_fix">
+            <div className="bi_left-section">
               Name:
               <input
                 type="text"
@@ -203,8 +192,7 @@ const handleInputChange = (e) => {
                 value={formData.name}
                 onChange={handleInputChange}
               />
-              <br/>
-
+              <br />
               Marital Status:
               <input
                 type="text"
@@ -212,8 +200,7 @@ const handleInputChange = (e) => {
                 value={formData.maritalStatus}
                 onChange={handleInputChange}
               />
-               <br/>
-
+              <br />
               Occupation:
               <input
                 type="text"
@@ -221,12 +208,10 @@ const handleInputChange = (e) => {
                 value={formData.occupation}
                 onChange={handleInputChange}
               />
-               <br/>
-
+              <br />
             </div>
 
-            <div className="right-section">
-
+            <div className="bi_right-section">
               Age:
               <input
                 type="number"
@@ -234,8 +219,7 @@ const handleInputChange = (e) => {
                 value={formData.age}
                 onChange={handleInputChange}
               />
-              <br/>
-
+              <br />
               Date of Birth:
               <input
                 type="date"
@@ -243,8 +227,7 @@ const handleInputChange = (e) => {
                 value={formData.dob}
                 onChange={handleInputChange}
               />
-              <br/>
-
+              <br />
               Date of Intake:
               <input
                 type="date"
@@ -252,12 +235,9 @@ const handleInputChange = (e) => {
                 value={formData.dateOfIntake}
                 onChange={handleInputChange}
               />
-              <br/>
-
-              <div className="radio-list1">
-
+              <br />
+              <div className="bi_radio-list1">
                 BPL:
-
                 <input
                   type="radio"
                   id="bplYes"
@@ -267,7 +247,6 @@ const handleInputChange = (e) => {
                   onChange={handleInputChange}
                 />
                 Yes
-
                 <input
                   type="radio"
                   id="bplNo"
@@ -277,15 +256,12 @@ const handleInputChange = (e) => {
                   onChange={handleInputChange}
                 />
                 No
-
               </div>
-
+            </div>
           </div>
 
-        </div>
-
-        <br/>
-          <div className="mid">
+          <br />
+          <div className="bi_mid">
             <b>Accompanied by:</b>
             <input
               type="text"
@@ -293,9 +269,8 @@ const handleInputChange = (e) => {
               value={formData.accompaniedBy}
               onChange={handleInputChange}
             />
-            <br/>
-            <br/>
-
+            <br />
+            <br />
             Year of drinking / Drug Abuse:
             <input
               type="text"
@@ -303,8 +278,7 @@ const handleInputChange = (e) => {
               value={formData.yearOfDrinkingAbuse}
               onChange={handleInputChange}
             />
-            <br/>
-
+            <br />
             Year of excessive drinking/ Drug Abuse:
             <input
               type="text"
@@ -312,8 +286,7 @@ const handleInputChange = (e) => {
               value={formData.yearOfExcessiveAbuse}
               onChange={handleInputChange}
             />
-            <br/>
-
+            <br />
             Present Pattern of drinking/ Drug Abuse:
             <input
               type="text"
@@ -321,10 +294,8 @@ const handleInputChange = (e) => {
               value={formData.presentPatternAbuse}
               onChange={handleInputChange}
             />
-
-            <br/>
-            <br/>
-
+            <br />
+            <br />
             <b>Presence of:</b>
             <input
               type="text"
@@ -333,7 +304,7 @@ const handleInputChange = (e) => {
               onChange={handleInputChange}
             />
           </div>
-          <ul className="radio-list">
+          <ul className="bi_radio-list">
             <li>
               <label>Use of other Drugs:</label>
               <input
@@ -352,7 +323,7 @@ const handleInputChange = (e) => {
                 value="Pastuseonly"
                 checked={formData.useOfOtherDrugs === "Pastuseonly"}
                 onChange={handleInputChange}
-              />  
+              />
               Past use only
               <input
                 type="radio"
@@ -362,14 +333,12 @@ const handleInputChange = (e) => {
                 checked={formData.useOfOtherDrugs === "presentlyusing"}
                 onChange={handleInputChange}
               />
-             
-                Presently using
-              
+              Presently using
             </li>
           </ul>
-          <br/>
+          <br />
 
-          <ul className="radio-list">
+          <ul className="bi_radio-list">
             <li>
               <label>Psychiatric Problem:</label>
               <input
@@ -401,8 +370,8 @@ const handleInputChange = (e) => {
               Moderate
             </li>
           </ul>
-          <br/>
-          <ul className="radio-list">
+          <br />
+          <ul className="bi_radio-list">
             <li>
               <label>Denial:</label>
               <input
@@ -435,90 +404,88 @@ const handleInputChange = (e) => {
             </li>
           </ul>
 
-          <br/>
-          <br/>
-          
-          <div className="mid1">
-          <b>Physical Problems (Record Specifically):</b>
-          <textarea
-            name="physicalProblems"
-            value={formData.physicalProblems}
-            onChange={handleInputChange}
-            style={{ border: 'none'}}
-          />
+          <br />
           <br />
 
-          <b>Prior Treatment for Addiction:</b>
-          <textarea
-            name="priorTreatment"
-            value={formData.priorTreatment}
-            onChange={handleInputChange}
-            style={{ border: 'none'}}
-          />
-        </div>
+          <div className="bi_mid1">
+            <b>Physical Problems (Record Specifically):</b>
+            <textarea
+              name="physicalProblems"
+              value={formData.physicalProblems}
+              onChange={handleInputChange}
+              style={{ border: "none" }}
+            />
+            <br />
 
-            <div className="radio-list">
+            <b>Prior Treatment for Addiction:</b>
+            <textarea
+              name="priorTreatment"
+              value={formData.priorTreatment}
+              onChange={handleInputChange}
+              style={{ border: "none" }}
+            />
+          </div>
 
-              <label><b>Willingness for Treatment: </b></label>
-              <input
-                type="radio"
-                id="willingnessForTreatmentUnwilling"
-                name="willingnessForTreatment"
-                value="Unwilling"
-                checked={formData.willingnessForTreatment === "Unwilling"}
-                onChange={handleInputChange}
-              />
-              
-                Unwilling
-              
-              <input
-                type="radio"
-                id="willingnessForTreatmentHalfhearted"
-                name="willingnessForTreatment"
-                value="Halfhearted"
-                checked={formData.willingnessForTreatment === "Halfhearted"}
-                onChange={handleInputChange}
-              />
-              
-                Half-hearted
-              
-              <input
-                type="radio"
-                id="willingnessForTreatmentWilling"
-                name="willingnessForTreatment"
-                value="Willing"
-                checked={formData.willingnessForTreatment === "Willing"}
-                onChange={handleInputChange}
-              />
-              Willing
+          <div className="bi_radio-list">
+            <label>
+              <b>Willingness for Treatment: </b>
+            </label>
+            <input
+              type="radio"
+              id="willingnessForTreatmentUnwilling"
+              name="willingnessForTreatment"
+              value="Unwilling"
+              checked={formData.willingnessForTreatment === "Unwilling"}
+              onChange={handleInputChange}
+            />
+            Unwilling
+            <input
+              type="radio"
+              id="willingnessForTreatmentHalfhearted"
+              name="willingnessForTreatment"
+              value="Halfhearted"
+              checked={formData.willingnessForTreatment === "Halfhearted"}
+              onChange={handleInputChange}
+            />
+            Half-hearted
+            <input
+              type="radio"
+              id="willingnessForTreatmentWilling"
+              name="willingnessForTreatment"
+              value="Willing"
+              checked={formData.willingnessForTreatment === "Willing"}
+              onChange={handleInputChange}
+            />
+            Willing
+          </div>
+          <br />
 
-              </div>
-            <br/>
-
-            <div className="mid1">
-             <b> Motivating factor for present treatment effort:</b>
-              <textarea
-                name="motivatingFactor"
-                value={formData.motivatingFactor}
-                onChange={handleInputChange}
-                style={{ border: 'none'}}
-              />
-            </div>
+          <div className="bi_mid1">
+            <b> Motivating factor for present treatment effort:</b>
+            <textarea
+              name="motivatingFactor"
+              value={formData.motivatingFactor}
+              onChange={handleInputChange}
+              style={{ border: "none" }}
+            />
+          </div>
 
           <center>
             {/* <button type="button" onClick={gotoform2}>
             Next
           </button>
-           */}<button type="button" onClick={fetchIncompleteData}>Fetch Data</button>
-                     <button>1</button>
-            <button type="submit">Submit</button>
-            <button onClick={handleNext}>next</button>
-            <button onClick={populateFormFields}>Populate Form</button>
+           */}
+            {/* <button type="button" onClick={fetchIncompleteData}>Fetch Data</button>
+                     <button>1</button> */}
+            {/* <button type="submit">Submit</button> */}
+            <div className="bi_endbtn">
+              <button onClick={handleNext}>Next &raquo;</button>
+            </div>
+            {/* <button onClick={populateFormFields}>Populate Form</button> */}
           </center>
         </div>
       </div>
     </form>
   );
 };
-
 export default IntakeForm;

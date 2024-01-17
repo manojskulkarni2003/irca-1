@@ -11,6 +11,7 @@
 /* Style for each navigation item */
 .nav-item {
   margin-right: 20px; /* Adjust the spacing between items */
+  /* font-size: large; */
 }
 
 /* Style for the Dropdown Toggle */
@@ -40,4 +41,16 @@
 
 .dropdown-item:hover {
   background-color: #f1f1f1;
+}
+
+.bi_logout{
+  margin-left: 70px;
+  background-color: #007bff;
+}
+
+.shift_left
+{
+  margin-right: auto;
+  text-decoration: none;
+  list-style: none;
 }

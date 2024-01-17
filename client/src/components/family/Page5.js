@@ -84,17 +84,17 @@ const AdjustmentPatterns = () => {
       };
 
       // Make a POST request to the server
-      // const response = await fetch('http://localhost:4200/family/page5', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
+      const response = await fetch('http://localhost:5000/family/page5', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error(`HTTP error! Status: ${response.status}`);
-      // }
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
       // If needed, handle the response from the server
 
@@ -390,7 +390,7 @@ const AdjustmentPatterns = () => {
         <button className="fh_prev-btn" onClick={goToPrevPage}>
         &laquo;  Prev 
         </button>
-        <button className="fh_submit-btn" onClick={onSubmit}>
+        <button className="fh_endbtn" onClick={onSubmit}>
             Submit
           </button>
       </div>

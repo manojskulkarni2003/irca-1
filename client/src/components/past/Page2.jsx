@@ -25,137 +25,184 @@ const Form2 = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/api/submitFormData", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  //   try {
+  //     const response = await fetch(
+  //       "http://localhost:5000/past/api/submitFormData",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(formData),
+  //       }
+  //     );
 
-      
-      console.log("Form data submitted:", response);
+  //     console.log("Form data submitted:", response);
 
-     
-      setFormData({
-        date: "",
-        complaints: "",
-        medication: "",
-        signature: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
-  };
+  //     setFormData({
+  //       date: "",
+  //       complaints: "",
+  //       medication: "",
+  //       signature: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //   }
+  // };
 
   const navigate = useNavigate();
 
   const handleNext = () => {
     localStorage.setItem("formData", JSON.stringify(formData));
     navigate("/past/page3");
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
-  
+
+  /*const handleNext = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:5000/past/form2", // Update the endpoint
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        console.log("Form data submitted successfully");
+        localStorage.setItem("formData", JSON.stringify(formData));
+        navigate("/past/page3");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      } else {
+        console.error("Error submitting form:", response.statusText);
+        // Handle error appropriately (e.g., show error message to the user)
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Handle error appropriately (e.g., show error message to the user)
+    }
+  };*/
+
   const handlePrev = () => {
     localStorage.setItem("formData", JSON.stringify(formData));
     navigate("/past/page1");
-  };
-
-  const loadSavedData = () => {
-    const savedData = localStorage.getItem("formData");
-    if (savedData) {
-      setFormData(JSON.parse(savedData));
-    }
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div style={{ border: '6px double black', padding: '10px', outline:'solid 2px black' }}> 
+    <form>
+      <div
+        style={{
+          margin: "80px 70px",
+          border: "6px double black",
+          padding: "10px",
+          outline: "solid 2px black",
+        }}
+      >
         <table
+          className="past2table"
           style={{ width: "100%", borderCollapse: "collapse" }}
           id="medicalTable"
         >
           <thead>
             <tr>
-            <th colSpan="4" style={{ textAlign: "center" }}>Medication Provided during treatment: Physical</th>
-
+              <th colSpan="4" style={{ textAlign: "center" }}>
+                <h1>Medication Provided during treatment: Physical</h1>
+              </th>
             </tr>
             <tr>
-              <th style={tableCellStyle}>Date</th>
-              <th style={tableCellStyle}>Complaints</th>
-              <th style={tableCellStyle}>
+              <th className="past2-th" style={past2tableCellStyle}>
+                Date
+              </th>
+              <th className="past2-th" style={past2tableCellStyle}>
+                Complaints
+              </th>
+              <th className="past2-th" style={past2tableCellStyle}>
                 Medication/Reason for Containing/Change of Medication
               </th>
-              <th style={tableCellStyle}>Signature</th>
+              <th className="past2-th" style={past2tableCellStyle}>
+                Signature
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td className="past2-td">
                 <input
                   type="date"
-                  className="text1"
+                  className="past2text1"
                   name="date"
                   value={formData.date}
                   onChange={handleInputChange}
-                  style={inputStyle}
+                  style={past2inputStyle}
                 />
               </td>
-              <td>
+              <td className="past2-td">
                 <textarea
-                  className="text1"
-                  rows="30"
-                  cols="30"
+                  className="past2text1"
+                  rows="35"
+                  cols="35"
                   name="complaints"
                   value={formData.complaints}
                   onChange={handleInputChange}
-                  style={textareaStyle}
+                  style={past2textareaStyle}
                   margin-inline-start="auto"
                 ></textarea>
               </td>
-              <td>
+              <td className="past2-td">
                 <textarea
-                  className="text1"
-                  rows="30"
-                  cols="30"
+                  className="past2text1"
+                  rows="35"
+                  cols="35"
                   name="medication"
                   value={formData.medication}
                   onChange={handleInputChange}
-                  style={textareaStyle}
+                  style={past2textareaStyle}
                 ></textarea>
               </td>
-              <td>
+              <td className="past2-td">
                 <input
                   type="file"
                   id="signature"
                   accept=".jpg, .jpeg, .png, .pdf"
-                  style={inputStyle}
+                  style={past2inputStyle}
                 />
               </td>
             </tr>
           </tbody>
         </table>
 
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <button type="button" onClick={handlePrev} style={buttonStyle}>
-            Previous
+        <div style={{ display: "flex", justifyContent: "space-between" }}></div>
+        <div className="ph_endbtn ph_display">
+          <button
+            className="past2button"
+            type="button"
+            onClick={handlePrev}
+            style={past2buttonStyle}
+          >
+            &laquo; Prev
           </button>
 
-          <button align="center">Page 2</button>
+          {/* <button style={past2buttonStyle} align="center">Page 2</button> */}
 
-          <div style={{ textAlign: "center" }}>
-            <button type="submit" style={buttonStyle}>
+          {/* <div style={{ textAlign: "center" }}>
+            <button className="past2button" type="submit" style={past2buttonStyle}>
               Submit
             </button>
-          </div>
-
-          
-
-          <button type="button" onClick={handleNext} style={buttonStyle}>
-            Next
+          </div> */}
+          <button
+            className="past2button"
+            type="button"
+            onClick={handleNext}
+            style={past2buttonStyle}
+          >
+            Next &raquo;
           </button>
         </div>
       </div>
@@ -163,28 +210,27 @@ const Form2 = () => {
   );
 };
 
-const tableCellStyle = {
-  
+const past2tableCellStyle = {
   padding: "8px",
   textAlign: "left",
   backgroundColor: "#f2f2f2",
 };
 
-const inputStyle = {
+const past2inputStyle = {
   width: "100%",
   boxSizing: "border-box",
   padding: "8px",
   margin: "4px 0",
 };
 
-const textareaStyle = {
+const past2textareaStyle = {
   width: "100%",
   boxSizing: "border-box",
   padding: "8px",
   margin: "4px 0",
 };
 
-const buttonStyle = {
+const past2buttonStyle = {
   marginTop: "10px",
   padding: "10px",
 };

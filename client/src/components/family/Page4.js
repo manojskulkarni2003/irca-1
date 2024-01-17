@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Page4 = () => {
     const navigate = useNavigate();
     const goToNextPage = async () => {
-      // try {
+      try {
         // Gather the data from the form or state
         const dataToSend = {
           yearsOfMarriedLife: document.getElementById('yearsOfMarriedLife').value,
@@ -23,28 +23,28 @@ const Page4 = () => {
         
   
         // Make a POST request to the server
-      //   const response = await fetch('http://localhost:4200/family/page4', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //     },
-      //     body: JSON.stringify(dataToSend),
-      //   });
+        const response = await fetch('http://localhost:5000/family/page4', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dataToSend),
+        });
   
-      //   if (!response.ok) {
-      //     throw new Error(`HTTP error! Status: ${response.status}`);
-      //   }
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
       
       //   // If needed, handle the response from the server
       
-      // } catch (error) {
-      //   console.error('Error:', error);
-      // } finally {
+      } catch (error) {
+        console.error('Error:', error);
+      } finally {
         // Navigate to the next page
         navigate('/family/page5');
         window.scrollTo({ top: 0, behavior: 'instant' });
       }
-    // };
+    };
       const goToPrevPage = () => {
         // Perform any necessary validation or data processing before navigating
         navigate('/family/page3');

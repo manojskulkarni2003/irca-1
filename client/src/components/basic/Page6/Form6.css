@@ -1,10 +1,10 @@
-/* 
-.k {
+
+.bi_k {
     font-style: oblique;
     font-weight: bold;
 }
 
-.id6 {
+.bi_id6 {
     font-weight: normal;
     border: double 6px black;
     outline: solid 2px black;
@@ -13,25 +13,25 @@
     font-style: normal;
 }
 
-.id6 h2 {
+.bi_id6 h2 {
     text-align: center;
     font-weight: bold;
 }
 
-.id6 button {
+/* .bi_id6 button {
     text-decoration: none;
     transition: background-color 0.3s;
     border: 1px solid #4caf50;
     margin: 4px;
     margin-right: 5%;
     cursor: pointer;
-  }
+  } */
 
 
 
 
-.sign1{
+.bi_sign1{
     font-style: oblique; 
     font-weight: bold; 
 
-} */
+}

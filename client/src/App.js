@@ -13,17 +13,16 @@ import Page2 from './components/family/Page2.js'
 import Page3 from './components/family/Page3.js'
 import Page4 from './components/family/Page4.js'
 import Page5 from './components/family/Page5.js'
-import Past1 from'./components/past/Page1.jsx'
-import Past2 from'./components/past/Page2.jsx'
-import Past3 from'./components/past/Page3.jsx'
-import Past4 from'./components/past/Page4.jsx'
+import Past1 from './components/past/Page1.jsx'
+import Past2 from './components/past/Page2.jsx'
+import Past3 from './components/past/Page3.jsx'
+import Past4 from './components/past/Page4.jsx'
 import Medical1 from './components/medical/Page1/Page1.jsx'
 
 import Medical2 from './components/medical/Page2/PatientInformation.jsx'
+import Login from './components/Login.jsx'
+import Signup from './components/Signup.jsx'
 
-import Medical3 from './components/medical/Page3/Page3.jsx'
-
-import Medical4 from './components/medical/Page4/Page4.jsx'
 
 
 
@@ -36,31 +35,138 @@ import './App.css'
 const App = () => {
   return (
     <>
-      <div className="sticky-home"> 
-        <Home />
-      </div>
+
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route exact path="/basic/form1" element={<IntakeForm />} />
-        <Route exact path='/basic/form2' element={<Form2 />} />
-        <Route exact path='/basic/form3' element={<Form3 />} />
-        <Route exact path='/basic/form4' element={<Form4 />} />
-        <Route exact path='/basic/form5' element={<Form5 />} />
-        <Route exact path='/basic/form6' element={<Form6 />} />
-        <Route exact path='/basic/form7' element={<Form7 />} />
-        <Route exact path='/family/page1' element={<Page1 />} />
-        <Route exact path='/family/page2' element={<Page2 />} />
-        <Route exact path='/family/page3' element={<Page3 />} />
-        <Route exact path='/family/page4' element={<Page4 />} />
-        <Route exact path='/family/page5' element={<Page5 />} />
-        <Route exact path='/past/page1' element={<Past1 />} />
-        <Route exact path='/past/page2' element={<Past2 />} />
-        <Route exact path='/past/page3' element={<Past3 />} />
-        <Route exact path='/past/page4' element={<Past4 />} />
-        <Route exact path='/medical/page1' element={<Medical1 />} />
-        <Route exact path='/medical/page2' element={<Medical2 />} />
-        <Route exact path='/medical/page3' element={<Medical3 />} />
-        <Route exact path='/medical/page4' element={<Medical4 />} />
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/basic/form1" element={<>
+          <div className="sticky-home">
+            <Home />
+          </div>
+          <IntakeForm />
+        </>} />
+        <Route exact path='/basic/form2' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form2 />
+        </>} />
+        <Route exact path='/basic/form3' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form3 />
+        </>} />
+        <Route exact path='/basic/form4' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form4 />
+        </>} />
+        <Route exact path='/basic/form5' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form5 />
+        </>} />
+        <Route exact path='/basic/form6' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form6 />
+        </>} />
+        <Route exact path='/basic/form7' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Form7 />
+        </>} />
+        <Route exact path='/family/page1' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Page1 />
+        </>} />
+        <Route exact path='/family/page2' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Page2 />
+        </>} />
+        <Route exact path='/family/page3' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Page3 />
+        </>} />
+        <Route exact path='/family/page4' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Page4 />
+        </>} />
+        <Route exact path='/family/page5' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Page5 />
+        </>} />
+        <Route exact path='/past/page1' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Past1 />
+        </>} />
+        <Route exact path='/past/page2' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Past2 />
+        </>} />
+        <Route exact path='/past/page3' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Past3 />
+        </>} />
+        <Route exact path='/past/page4' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Past4 />
+        </>} />
+        <Route exact path='/medical/page1' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Medical1 />
+        </>} />
+        <Route exact path='/medical/page2' element={
+        <>
+        <div className="sticky-home">
+            <Home />
+          </div>
+          <Medical2 />
+        </>} />
+        {/* <Route exact path='/medical/page3' element={<Medical3 />} />
+        <Route exact path='/medical/page4' element={<Medical4 />} /> */}
 
 
 

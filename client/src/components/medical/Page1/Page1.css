@@ -1,28 +1,32 @@
-/* #div1
+#divv1
 {
    float: right;
 }
-#div2
+#divv2
 {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    margin: 50px 50px;
+    border: double 6px black;
+    outline: solid 2px black;
 }
-#f1
+#ff1
 {
-    border: 4px double black;
-    padding: 3%;
-    padding-top: 0px;
+    /* border: 2px double black; */
+    padding: 20px 20px;
+    /*padding-top: 0px;
     width: 20cm;
+    height: 24.3cm; */
 }
-h1
+#hih1
 {
     text-align: center;
 }
-table,th,td
+#tt,#th1,#td1
 {
     border: 1px solid black;
     border-collapse: collapse;
-    font-size: small;
+    font-size: 15px ;
     height: 60px;
 }
 
@@ -31,10 +35,10 @@ table,th,td
     width: 30px;
     margin-right: 100px;
 }
-.bordered-table{
+.borde{
     height: 150px;
 }
-.bordered-table input[type="text"]
+.borde input[type="text"]
 {
     border: none;
     outline: none;
@@ -45,9 +49,31 @@ table,th,td
 .name
 {
     margin-right: 70px;
-    
+    height: 9px;
+    width: 9px;
 }
-#div7 {
+#divv7 {
+    border: 1px solid black;
+    height: 0px;
+    width: 30px;
+    margin-left: 10cm;
+    margin-top: 0.6cm;
+    padding-bottom: 1.2cm;
     display: flex;
     justify-content: center;
-} */
+}
+.mh_endbtn button
+{
+    font-size: 15px;
+    padding: 12px 12px;
+    border-radius: 10px;
+    margin: 10px 4px;
+}
+.mh_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    font-weight: 300;
+}

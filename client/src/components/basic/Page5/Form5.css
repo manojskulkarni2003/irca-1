@@ -1,9 +1,9 @@
-/* .highlight{
+.bi_highlight{
     font-weight: lighter;
     font-style:normal;
 }
 
-.id5{
+.bi_id5{
     font-weight: bold;
     border: double 6px black;
     outline: solid 2px black;
@@ -12,13 +12,14 @@
     font-style: oblique;
 }
 
-.id5 h3{
+.bi_id5 h3{
     padding: 0%;
     margin: 0%;
     font-style:normal;
+    font-size: medium;
 }
 
-.id5 input[type="text"],.id5 input[type="number"] {
+.bi_id5 input[type="text"],.id5 input[type="number"] {
     border: none;
     border-bottom: 3px dotted #000;
     text-decoration: none;
@@ -27,13 +28,20 @@
 }
 
 
-
-.id5 button {
+/* .bi_id5 button {
     text-decoration: none;
     transition: background-color 0.3s;
     border: 1px solid #4caf50;
     margin: 4px;
     margin-right: 5%;
     cursor: pointer;
-  }
- */
+  } */
+
+.bi_endbtn button:hover
+{
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    font-weight: 300;
+}

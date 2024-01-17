@@ -46,7 +46,7 @@ const Page1 = () => {
 
   const [denialStatus, setDenialStatus] = useState('');
   const goToNextPage = async () => {
-    // try {
+    try {
       // Perform any necessary validation or data processing before navigating
       const dataToSend = {
         familyHistoryRows,
@@ -59,34 +59,33 @@ const Page1 = () => {
         denialStatus,
       };
   
-      // console.log('Data to send:', dataToSend);
+      console.log('Data to send:', dataToSend);
   
-      // const response = await fetch('http://localhost:5000/page1', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(dataToSend),
-      // });
+      const response = await fetch('http://localhost:5000/family/page1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
   
-      // if (!response.ok) {
-      //   throw new Error(`HTTP error! Status: ${response.status}`);
-      // }
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
   
       // If needed, handle the response from the server
       // Navigate to the next page
       navigate('/family/page2');
       window.scrollTo({ top: 0, behavior: 'instant' });
-    // } catch (error) {
-    //   console.error('Error:', error);
-    // }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
   
   
   return (
     <div className="page page1 active">
       <div className="fh_mainhead">
-        <h1>Integrated Rehabilitation Centre for Addicts(IRCA) - Family history</h1>
       </div>
       <div className="fh_family_history">
         <div className="fh_block-head">

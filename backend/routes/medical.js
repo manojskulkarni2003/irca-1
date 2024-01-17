@@ -18,7 +18,7 @@ import mongoose from 'mongoose'
 // });
 
 
-const formDataSchema = new mongoose.Schema({
+const formMedicalSchema = new mongoose.Schema({
   regNo: String,
   name: String,
   age: String,
@@ -151,7 +151,7 @@ const formDataSchema = new mongoose.Schema({
   signature: String,
 });
 
-const FormData = mongoose.model('FormData', formDataSchema);
+const FormMedicalData = mongoose.model('FormmedicalData', formMedicalSchema);
 
 // app.use(cors());
 // app.use(bodyParser.json());
@@ -182,7 +182,7 @@ router.post('/api/submitFormData', async (req, res) => {
     } = req.body;
 
 
-    const formData = new FormData({
+    const formMedicalData = new FormMedicalData({
       regNo,
       name,
       age,
@@ -205,7 +205,7 @@ router.post('/api/submitFormData', async (req, res) => {
       signature,
     });
 
-    await formData.save();
+    await formMedicalData.save();
     res.status(201).json({ message: 'Form data saved successfully' });
   } catch (error) {
     console.error('Error:', error);
@@ -213,8 +213,5 @@ router.post('/api/submitFormData', async (req, res) => {
   }
 });
 
-router.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
 
 export default router;

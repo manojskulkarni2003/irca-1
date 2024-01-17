@@ -11,7 +11,7 @@ import mongoose from 'mongoose'
 
 
 // Create a schema for your data
-const formDataSchema = new mongoose.Schema({
+const formBasicSchema = new mongoose.Schema({
     name: String,
     maritalStatus: String,
     occupation: String,
@@ -85,7 +85,7 @@ const formDataSchema = new mongoose.Schema({
 });
 
 // Create a model
-const FormData = mongoose.model('FormData', formDataSchema);
+const FormBasicData = mongoose.model('FormBasicData', formBasicSchema);
 
 
 // app.use(cors());
@@ -172,7 +172,7 @@ router.post('/api/submitFormData', async (req, res) => {
 
 
     // Create a new instance of FormData and assign values from different pages
-    const formData = new FormData({
+    const formBasicData = new FormBasicData({
       name,
       maritalStatus,
       occupation,
@@ -262,7 +262,7 @@ router.post('/api/submitFormData', async (req, res) => {
     input28,
     });
 
-    await formData.save();
+    await formBasicData.save();
     res.status(201).json({ message: 'Form data saved successfully' });
   } catch (error) {
     res.status(500).json({ error: 'An error occurred while saving form data' });
@@ -275,7 +275,7 @@ router.get('/api/getIncompleteData', async (req, res) => {
 
   try {
     // Replace this with your database query logic
-    const incompleteData = await FormData.findOne({ name });
+    const incompleteData = await FormBasicData.findOne({ name });
 
     if (!incompleteData) {
       return res.status(404).json({ message: 'Incomplete data not found' });
