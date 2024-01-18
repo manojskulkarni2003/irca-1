@@ -206,7 +206,7 @@ const Form4 = () => {
             onClick={handlePrev}
             style={past4buttonStyle}
           >
-            &laquo; Prev
+            &laquo; Prev 
           </button>
           <div class="page-number">18</div>
           {/* <button style={past4buttonStyle} align="center">Page 2</button> */}
