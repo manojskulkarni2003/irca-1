@@ -671,6 +671,7 @@ const IntakeForm = () => {
           {/* <button style={past1buttonStyle} align="center">Page 1</button> */}
         </div>
         <div className="ph_endbtn ph_display">
+          <div class="page-number">15</div>
           <button style={past1buttonStyle} onClick={handleNext}>
             Next &raquo;
           </button>

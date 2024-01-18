@@ -182,6 +182,7 @@ const Page2 = () => {
         <button className="fh_prev-btn" onClick={goToPrevPage}>
         &laquo;  Prev 
         </button>
+        <div class="page-number">9</div>
         <button className="fh_next-btn" onClick={goToNextPage}>
           Next &raquo;
         </button>

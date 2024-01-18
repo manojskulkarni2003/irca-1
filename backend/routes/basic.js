@@ -11,7 +11,7 @@ import mongoose from 'mongoose'
 
 
 // Create a schema for your data
-const formBasicSchema = new mongoose.Schema({
+ const formBasicSchema = new mongoose.Schema({
     name: String,
     maritalStatus: String,
     occupation: String,
@@ -85,7 +85,7 @@ const formBasicSchema = new mongoose.Schema({
 });
 
 // Create a model
-const FormBasicData = mongoose.model('FormBasicData', formBasicSchema);
+export const FormBasicData = mongoose.model('FormBasicData', formBasicSchema);
 
 
 // app.use(cors());
@@ -284,6 +284,24 @@ router.get('/api/getIncompleteData', async (req, res) => {
     return res.status(200).json(incompleteData);
   } catch (error) {
     return res.status(500).json({ error: 'An error occurred while fetching data' });
+  }
+});
+
+
+router.get('/api/getBasicFormData', async (req, res) => {
+  const { name } = req.body;
+
+  try {
+    // Replace this with your database query logic
+    const basicFormData = await FormBasicData.findOne({ name });
+
+    if (!basicFormData) {
+      return res.status(404).json({ message: 'Basic form data not found' });
+    }
+
+    return res.status(200).json(basicFormData);
+  } catch (error) {
+    return res.status(500).json({ error: 'An error occurred while fetching basic form data' });
   }
 });
 

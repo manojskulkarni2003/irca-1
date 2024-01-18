@@ -358,6 +358,7 @@ const DeclarationForm = () => {
             <div className="footer">
               <div className="bi_endbtn">
                 <button onClick={handlePrev}>&laquo; Prev</button>
+                <div class="page-number">4</div>
                 <button onClick={handleNext}>Next &raquo;</button>
               </div>
             </div>

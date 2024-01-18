@@ -71,4 +71,21 @@ router.post('/page4', async (req, res) => {
     }
   });
 
+  router.get('/api/getFamilyFormData', async (req, res) => {
+    const { name } = req.query;
+  
+    try {
+      // Replace this with your database query logic
+      const familyFormData = await FormFamilyData.findOne({ name });
+  
+      if (!familyFormData) {
+        return res.status(404).json({ message: 'Family form data not found' });
+      }
+  
+      return res.status(200).json(familyFormData);
+    } catch (error) {
+      return res.status(500).json({ error: 'An error occurred while fetching family form data' });
+    }
+  });
+
 export default router;

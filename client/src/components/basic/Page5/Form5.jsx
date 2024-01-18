@@ -347,6 +347,7 @@ const YourComponent = () => {
           <div className="bi_footer">
             <div className="bi_endbtn">
               <button onClick={handlePrev}> &laquo; Prev </button>
+              <div class="page-number">5</div>
               <button onClick={handleNext}>Next &raquo;</button>
             </div>
           </div>

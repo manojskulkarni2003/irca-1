@@ -208,6 +208,7 @@ const Form4 = () => {
           >
             &laquo; Prev
           </button>
+          <div class="page-number">18</div>
           {/* <button style={past4buttonStyle} align="center">Page 2</button> */}
           <div style={{ textAlign: "center" }}>
             <button

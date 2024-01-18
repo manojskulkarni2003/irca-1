@@ -390,6 +390,7 @@ const AdjustmentPatterns = () => {
         <button className="fh_prev-btn" onClick={goToPrevPage}>
         &laquo;  Prev 
         </button>
+        <div class="page-number">12</div>
         <button className="fh_endbtn" onClick={onSubmit}>
             Submit
           </button>

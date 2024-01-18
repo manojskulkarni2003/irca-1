@@ -140,22 +140,45 @@
   cursor: pointer;
 } */
 
-.bi_endbtn button
-{
-    font-size: 15px;
-    padding: 12px 12px;
-    border-radius: 10px;
-    margin: 10px 4px;
+.page-number, .bi_endbtn {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.bi_endbtn button:hover
-{
-    font-size: 15px;
-    border-radius: 10px;
-    background-color: rgb(68, 66, 66);
-    color: white;
-    font-weight: 300;
+.page-number {
+  /* Your page number styles here */
+  font-size: 16px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin: 5px 2px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(68, 66, 66);
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
 }
+
+.page-number:hover {
+  background-color: rgb(68, 66, 66);
+  color: white;
+}
+
+.bi_endbtn button {
+  /* Your "Next" button styles here */
+  font-size: 15px;
+  padding: 12px 12px;
+  border-radius: 10px;
+  margin: 10px 4px;
+}
+
+.bi_endbtn button:hover {
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  font-weight: 300;
+}
+
 #body
 {
   font-family: Arial, sans-serif;

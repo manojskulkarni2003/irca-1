@@ -22,6 +22,7 @@ import Medical1 from './components/medical/Page1/Page1.jsx'
 import Medical2 from './components/medical/Page2/PatientInformation.jsx'
 import Login from './components/Login.jsx'
 import Signup from './components/Signup.jsx'
+import Result from './components/Result.js'
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
         {/* <Route path="/" element={<Home />} /> */}
         <Route exact path="/" element={<Login />} />
         <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/result" element={<Result />} />
         <Route exact path="/basic/form1" element={<>
           <div className="sticky-home">
             <Home />

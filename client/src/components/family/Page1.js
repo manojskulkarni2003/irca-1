@@ -91,7 +91,7 @@ const Page1 = () => {
         <div className="fh_block-head">
           <p>I. Family history</p>
         </div>
-        <h2 className='fh_h2'>1. Details regarding parents and siblings (provide relevant information):</h2>
+        <h2 className='fh_h2'>2. Details regarding parents and siblings (provide relevant information):</h2>
         <table id="fh_myTable">
           <thead>
             <tr>
@@ -253,6 +253,7 @@ const Page1 = () => {
           </label>
         </form>
         <div className="fh_endbtn">
+        <div class="page-number">8</div>
         <button className="fh_next-btn" onClick={goToNextPage}>
           Next &raquo;
         </button>

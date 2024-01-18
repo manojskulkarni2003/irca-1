@@ -101,6 +101,54 @@ app.post('/signup', async (req, res) => {
     }
   });
 
+
+  app.get('/api/getAllFormData', async (req, res) => {
+    const { name } = req.query;
+  
+    try {
+      // Fetch basic form data to get the "name" field
+      const basicFormData = await FormBasicData.findOne({ name });
+  
+      if (!basicFormData) {
+        return res.status(404).json({ message: 'Basic form data not found' });
+      }
+  
+      // Use the "name" field to fetch data from other forms
+      const familyFormData = await FormFamilyData.findOne({ name: basicFormData.name });
+      const medicalFormData = await FormMedicalData.findOne({ name: basicFormData.name });
+  
+      if (!familyFormData || !medicalFormData) {
+        return res.status(404).json({ message: 'Form data not found' });
+      }
+  
+      return res.status(200).json({
+        basicFormData,
+        familyFormData,
+        medicalFormData,
+      });
+    } catch (error) {
+      return res.status(500).json({ error: 'An error occurred while fetching form data' });
+    }
+  });
+
+  app.get('/user/:name', async (req, res) => {
+    try {
+      const userName = req.params.name;
+      const user = await User.findOne({ name: userName });
+  
+      if (!user) {
+        return res.status(404).send('User not found');
+      }
+  
+      res.send(user);
+    } catch (error) {
+      res.status(500).send('Something went wrong');
+    }
+  });
+  
+  
+
+
 app.listen(5000,()=>{
     console.log("Server listen at 5000 port");
 })

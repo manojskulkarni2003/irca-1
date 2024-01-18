@@ -153,6 +153,7 @@ const DisulfiramLetter = () => {
         <div className="footer">
           <div className="bi_endbtn">
             <button onClick={handlePrev}> &laquo; Prev </button>
+            <div class="page-number">6</div>
             <button onClick={handleNext}>Next &raquo;</button>
           </div>
         </div>

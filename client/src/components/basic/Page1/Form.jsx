@@ -173,7 +173,7 @@ const IntakeForm = () => {
       <div className="bi_intake-form">
         <div className="bi_form-page ">
           <div className="bi_top">
-            <h2 id="bi_leftshift">2.Basic Information</h2>
+            <h2 id="bi_leftshift">1.Basic Information</h2>
             <br />
             <br />
             <br />
@@ -478,6 +478,8 @@ const IntakeForm = () => {
             {/* <button type="button" onClick={fetchIncompleteData}>Fetch Data</button>
                      <button>1</button> */}
             {/* <button type="submit">Submit</button> */}
+            <div class="page-number">1</div>
+
             <div className="bi_endbtn">
               <button onClick={handleNext}>Next &raquo;</button>
             </div>

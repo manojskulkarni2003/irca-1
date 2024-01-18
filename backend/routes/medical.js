@@ -214,4 +214,22 @@ router.post('/api/submitFormData', async (req, res) => {
 });
 
 
+router.get('/api/getMedicalFormData', async (req, res) => {
+  const { name } = req.query;
+
+  try {
+    // Replace this with your database query logic
+    const medicalFormData = await FormMedicalData.findOne({ name });
+
+    if (!medicalFormData) {
+      return res.status(404).json({ message: 'Medical form data not found' });
+    }
+
+    return res.status(200).json(medicalFormData);
+  } catch (error) {
+    return res.status(500).json({ error: 'An error occurred while fetching medical form data' });
+  }
+});
+
+
 export default router;

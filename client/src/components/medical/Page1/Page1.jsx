@@ -107,20 +107,23 @@ function Page1() {
   const handleNext = () => {
     localStorage.setItem("formData", JSON.stringify(formData));
     navigate("/medical/page2");
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/medical/api/submitFormData", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:5000/medical/api/submitFormData",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       console.log("Form data submitted:", response);
 
@@ -204,7 +207,7 @@ function Page1() {
       });
 
       navigate("/PatientInformation");
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: "instant" });
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -213,7 +216,7 @@ function Page1() {
   return (
     <div id="divv2">
       <form id="ff1" onSubmit={handleSubmit}>
-        <h2 style={{fontWeight:'bold'}}>3.Medical Form</h2>
+        <h2 style={{ fontWeight: "bold" }}>3.Medical Form</h2>
         <div id="divv1">
           <label>Reg. No. : </label>
           <input
@@ -1117,7 +1120,15 @@ function Page1() {
             </tr>
           </tbody>
         </table>
-        <div className="mh_endbtn" style={{display:'flex',justifyContent:'center',margin : '10px 0px'}}>
+        <div
+          className="mh_endbtn"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "10px 0px",
+          }}
+        >
+          <div class="page-number">13</div>
           <button onClick={handleNext}>Next &raquo;</button>
         </div>
       </form>

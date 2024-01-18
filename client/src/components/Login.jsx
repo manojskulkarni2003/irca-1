@@ -46,7 +46,7 @@ function App() {
       // Handle successful login (you may want to store the token in a secure way)
       const data = await response.json();
       console.log("Login successful. Token:", data.token);
-      navigate("/family/page1");
+      navigate("/basic/form1");
 
       // Redirect to the dashboard or perform other actions as needed
     } catch (error) {

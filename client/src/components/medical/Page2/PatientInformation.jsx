@@ -36,7 +36,7 @@ const PatientInformation = () => {
   const handleClickPrev = () => {
     localStorage.setItem("formData", JSON.stringify(formData));
     navigate("/medical/page1");
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const toggleCheckbox = (index, currentListId) => {
@@ -323,6 +323,7 @@ const PatientInformation = () => {
           <button id="but" onClick={handleClickPrev}>
             &laquo; Prev
           </button>
+          <div class="page-number">14</div>
           <button id="butt" type="submit" onClick={handleSubmit}>
             Submit
           </button>

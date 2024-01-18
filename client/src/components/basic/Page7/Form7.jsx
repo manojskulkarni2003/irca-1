@@ -131,6 +131,7 @@ const PhysicalLetter = () => {
           <div className="bi_footer">
             <div className="bi_endbtn">
               <button onClick={handlePrev}> &laquo; Prev </button>
+              <div class="page-number">7</div>
               <button type="submit">Submit</button>
             </div>
           </div>

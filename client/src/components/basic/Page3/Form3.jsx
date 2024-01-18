@@ -182,6 +182,7 @@ const Form3 = () => {
           <div className="bi_footer">
             <div className="bi_endbtn">
               <button onClick={handlePrev}> &laquo; Prev </button>
+              <div class="page-number">3</div>
               <button onClick={handleNext}>Next &raquo;</button>
             </div>
           </div>

@@ -51,16 +51,17 @@ const Home = () => {
         <div className="container-fluid">
           <div className="collapse navbar-collapse  "  id="navbarNav">
             <ul className="navbar-nav ">
+            <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/basic/form1">
+                  Basic Information
+                </Link>
+              </li>
             <li className="nav-item" >
                 <Link className="nav-link" to="/family/page1">
                   Family History
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/basic/form1">
-                  Basic Information
-                </Link>
-              </li>
+             
               
               <li className="nav-item">
                 <Link className="nav-link" to="/medical/page1">

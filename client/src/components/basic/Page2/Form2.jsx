@@ -304,6 +304,7 @@ const Form2 = () => {
             <div className="footer">
               <div className="bi_endbtn">
                 <button onClick={page1}> &laquo; Prev </button>
+                <div class="page-number">2</div>
                 <button onClick={page3}>Next &raquo;</button>
               </div>
             </div>

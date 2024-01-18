@@ -410,6 +410,7 @@ const Page4 = () => {
         <button className="fh_prev-btn" onClick={goToPrevPage}>
         &laquo;  Prev 
         </button>
+        <div class="page-number">11</div>
         <button className="fh_next-btn" onClick={goToNextPage}>
           Next &raquo;
         </button>
